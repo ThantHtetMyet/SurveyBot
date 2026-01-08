@@ -32,7 +32,7 @@ const MultiSelect = ({ options, selectedValues, onChange, placeholder = "Select 
     const newSelected = [...selectedValues, option];
     onChange(newSelected);
     setSearchTerm('');
-    inputRef.current?.focus();
+    setIsOpen(false); // Close dropdown after selection
   };
 
   const handleRemove = (option, e) => {

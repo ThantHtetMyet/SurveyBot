@@ -19,7 +19,7 @@ public class UserCommentController : ControllerBase
     public UserCommentController(IConfiguration configuration, IFileLoggerService logger)
     {
         _configuration = configuration;
-        _connectionString = _configuration.GetConnectionString("DefaultConnection") 
+        _connectionString = _configuration.GetConnectionString("SupabaseConnection") 
             ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
         _logger = logger;
     }
